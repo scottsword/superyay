@@ -1,0 +1,25 @@
+{
+  "name": "superyay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottsword/superyay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottsword/superyay/issues"
+  },
+  "homepage": "https://github.com/scottsword/superyay#readme",
+  "devDependencies": {
+    "jest": "^22.1.4"
+  },
+  "jest": {
+    "verbose": true
+  }
+}
