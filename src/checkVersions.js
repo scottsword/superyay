@@ -15,12 +15,12 @@ module.exports = (versionStore) => {
     // Handle Messaging
     if (!isNodeValid) {
       console.log('\033[31mWARNING\033[0m: Your version of Node.js is not the supported version for this project!');
-      console.log('We wanted \033[32m' + versionStore.current.node + '\033[0m, but you\'re currently using \033[33m' + versionStore.node + '\033[0m.');
+      console.log('Superyay was looking for \033[32m' + versionStore.current.node + '\033[0m, but found \033[33m' + versionStore.node + '\033[0m.');
     }
 
     if (!isNpmValid) {
       console.log('\033[31mWARNING\033[0m: Your version of npm is not the supported version for this project!');
-      console.log('We wanted \033[32m' + versionStore.current.npm + '\033[0m, but you\'re currently using \033[33m' + versionStore.npm + '\033[0m.');
+      console.log('Superyay was looking for \033[32m' + versionStore.current.npm + '\033[0m, but found \033[33m' + versionStore.npm + '\033[0m.');
     }
 
     // Handle Solutions

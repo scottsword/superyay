@@ -7,11 +7,11 @@ if (!config) {
 }
 
 if (!config.engines) {
-  throw new Error('No versions of Node.js or npm set in package.json. Please add them under "engines".');
+  throw new Error('Superyay couldn\'t find any versions of Node.js or npm set in package.json. Please add them under "engines".');
 } else if (!config.engines.node) {
-  throw new Error('No node version set in package.json. Please add it under "engines".');
+  throw new Error('Superyay couldn\'t find a node version set in package.json. Please add it under "engines".');
 } else if (!config.engines.npm) {
-  throw new Error('No npm version set in package.json. Please add it under "engines".');
+  throw new Error('Superyay couldn\'t find an npm version set in package.json. Please add it under "engines".');
 }
 
 const getNodeVersion = require('../src/getNodeVersion.js');
