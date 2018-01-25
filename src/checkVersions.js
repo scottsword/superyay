@@ -3,9 +3,11 @@
  * @param {object} versionStore - Store for holding version information.
  * well as the active Node.js version.
  */
-exports.checkVersions = (versionStore) => {
+module.exports = (versionStore) => {
   const isNodeValid = versionStore.node === versionStore.current.node;
   const isNpmValid = versionStore.npm === versionStore.current.npm;
+
+  console.log('checkVersions');
 
   if (!isNodeValid || !isNpmValid) {
     console.log('*******************************************************************************');
@@ -22,16 +24,12 @@ exports.checkVersions = (versionStore) => {
     }
 
     // Handle Solutions
-    if (!isNodeValid && !isNpmValid) {
-      console.log('To install the current supported node.js and npm versions run: n ' + versionStore.current.node + ' && npm install -g npm@' + versionStore.current.npm);
-    } else if (!isNodeValid) {
-      console.log('To install the current supported node.js version run: n ' + versionStore.current.node);
-    } else if (!isNpmValid)  {
-      console.log('To install the current supported npm version run: npm install -g npm@' + versionStore.current.npm);
+    if (versionStore.config) {
+        if (versionStore.config.link) {
+          console.log('For more information see: ');
+          console.log(versionStore.config.link);
+        }
     }
-
-    console.log('For more information check out the wiki: ');
-    console.log('https://tsheets.atlassian.net/wiki/spaces/DEV/pages/347635838/Instructions+Configuring+Local+Development+Environment+for+Building+Frontend+Assets');
 
     console.log('*******************************************************************************');
   }

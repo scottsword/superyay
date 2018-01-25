@@ -6,13 +6,14 @@ const runCommand = require('./runCommand.js');
  * @param {string} currentNpmVer - Current version of npm that we want to enforce.
  * @returns {promise} Resolves an object that serves as version data store.
  */
-module.exports = (currentNodeVersion, currentNpmVer) => {
+module.exports = (currentVersions, config) => {
   return runCommand('node -v')
       .then(version => {
         return {
+          config: config,
           current: {
-            node: currentNodeVersion,
-            npm: currentNpmVer
+            node: currentVersions.node,
+            npm: currentVersions.npm,
           },
           node: version.replace('\n', '').replace('v', ''),
         };
