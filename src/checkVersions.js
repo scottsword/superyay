@@ -7,8 +7,6 @@ module.exports = (versionStore) => {
   const isNodeValid = versionStore.node === versionStore.current.node;
   const isNpmValid = versionStore.npm === versionStore.current.npm;
 
-  console.log('checkVersions');
-
   if (!isNodeValid || !isNpmValid) {
     console.log('*******************************************************************************');
 
