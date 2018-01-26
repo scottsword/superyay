@@ -3,6 +3,7 @@
 Superyay is a nice way to warn contributors that they aren't using the desired version of Node.js or npm.
 ![alt text](https://github.com/scottsword/superyay/blob/master/img/example.png "Superyay example")
 
+---
 
 ## Installation
 `npm install superyay`
