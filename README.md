@@ -1,9 +1,8 @@
 # [Superyay](https://github.com/scottsword/superyay) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/scottsword/superyay/blob/master/LICENSE) [![CircleCI Status](https://circleci.com/gh/scottsword/superyay.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/scottsword/superyay)
 
 Superyay is a nice way to warn contributors that they aren't using the desired version of Node.js or npm.
-![alt text](https://github.com/scottsword/superyay/blob/master/img/example.png "Superyay example")
 
----
+![alt text](https://github.com/scottsword/superyay/blob/master/img/example.png "Superyay example")
 
 ## Installation
 `npm install superyay`
