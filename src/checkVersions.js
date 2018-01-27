@@ -30,6 +30,14 @@ module.exports = (versionStore) => {
     }
 
     console.log('*******************************************************************************');
+
+    // Exit out so no other scripts run
+    if (!isNodeValid || !isNpmValid) {
+        process.exit(1);
+    }
+
+  } else {
+    console.log('\033[32mSuperyay checks passed!\033[0m Using Node.js v' + versionStore.current.node + ' & npm v' + versionStore.current.npm);
   }
 
 };

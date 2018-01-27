@@ -2,8 +2,15 @@
 const config = require('../../../package.json');
 
 // Validation
-if (!config) {
-  throw new Error('Unable to locate package.json');
+try {
+    if (!config) {
+        throw new Error('Unable to locate package.json');
+    }
+}
+catch(e) {
+    console.log('**************************************************************************************************************');
+    console.log('\033[31m ' + e + '\033[0m');
+    console.log('**************************************************************************************************************');  
 }
 
 try {
