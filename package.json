@@ -1,6 +1,6 @@
 {
   "name": "superyay",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Detects the version of Node.js / npm running locally and throws a warning if they don't match the projects defined version in the package.json file.",
   "main": "index.js",
   "bin": {
