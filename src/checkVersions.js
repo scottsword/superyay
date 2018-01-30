@@ -8,6 +8,7 @@ module.exports = (versionStore) => {
   const isNpmValid = versionStore.npm === versionStore.current.npm;
 
   if (!isNodeValid || !isNpmValid) {
+    // Bookend Begin
     console.log('*******************************************************************************');
 
     // Handle Messaging
@@ -23,12 +24,39 @@ module.exports = (versionStore) => {
 
     // Handle Solutions
     if (versionStore.config) {
-        if (versionStore.config.link) {
+        if (versionStore.config.info) {
           console.log('For more information see: ');
           console.log(versionStore.config.link);
         }
+      if (!isNodeValid) {
+        if (versionStore.config.installType) {
+          console.log(' ');
+          console.log('To update your version of Node.js run the following command:');
+          if (versionStore.config.installType === 'nvm') {
+            console.log('nvm install v' + versionStore.current.node);
+          } else if (versionStore.config.installType === 'n') {
+            console.log('n ' + versionStore.current.node);
+          } else if (versionStore.config.installType === 'apt') {
+            console.log('curl -sL https://deb.nodesource.com/setup_' + versionStore.current.node[0] + '.x | sudo -E bash -');
+            console.log('sudo apt-get install -y nodejs');
+          } else if (versionStore.config.installType === 'brew') {
+            console.log('brew install node@' + versionStore.current.node[0]);
+          } else {
+            console.log('Unsupported install type provided: ' + versionStore.config.command);
+            console.log('Supported types: nvm, n, apt, brew');
+          }
+          console.log(' ');
+        }
+      }
+      if (!isNpmValid) {
+        console.log(' ');
+        console.log('To update your version of npm run the following command:');
+        console.log('npm i -g npm@' + versionStore.current.npm);
+        console.log(' ');
+      }
     }
 
+    // Bookend End
     console.log('*******************************************************************************');
 
     // Exit out so no other scripts run
