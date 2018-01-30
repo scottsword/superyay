@@ -26,7 +26,7 @@ module.exports = (versionStore) => {
     if (versionStore.config) {
         if (versionStore.config.info) {
           console.log('For more information see: ');
-          console.log(versionStore.config.link);
+          console.log(versionStore.config.info);
         }
       if (!isNodeValid) {
         if (versionStore.config.installType) {
@@ -45,14 +45,12 @@ module.exports = (versionStore) => {
             console.log('Unsupported install type provided: ' + versionStore.config.command);
             console.log('Supported types: nvm, n, apt, brew');
           }
-          console.log(' ');
         }
       }
       if (!isNpmValid) {
         console.log(' ');
         console.log('To update your version of npm run the following command:');
         console.log('npm i -g npm@' + versionStore.current.npm);
-        console.log(' ');
       }
     }
 
