@@ -63,6 +63,6 @@ Supported types: nvm, n, apt & brew.
 ```bash
 # run directly in your project via bin
 ./node_modules/.bin/superyay
-
+```
 
 ![alt text](https://github.com/scottsword/superyay/blob/master/img/example.png "Superyay example")
