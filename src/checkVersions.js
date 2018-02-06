@@ -63,7 +63,7 @@ module.exports = (versionStore) => {
     }
 
   } else {
-    console.log('\033[32mSuperyay checks passed!\033[0m Using Node.js v' + versionStore.current.node + ' & npm v' + versionStore.current.npm);
+    console.log('\033[32mChecks passed, Superyay!\033[0m Using Node.js v' + versionStore.current.node + ' & npm v' + versionStore.current.npm);
   }
 
 };
