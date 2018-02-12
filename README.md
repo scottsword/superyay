@@ -41,7 +41,7 @@ Supported types: nvm, n, apt & brew.
   ...,
   "engines": {
     "node": "6.10.2",
-    "node": "5.5.1"
+    "npm": "5.5.1"
   },
   "superyay": {
     "info": "https://awesome.wiki"
